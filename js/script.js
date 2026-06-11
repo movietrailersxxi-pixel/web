@@ -85,8 +85,8 @@ $(window).resize(function () {
 
 function sendPostMessage(_0x4eb976, _0x4a7105) {		
 	var _0x126c9e = document.getElementById(_0x4eb976).contentWindow;  
-	_0x126c9e.postMessage(btoa(_0x4a7105), "https://veros-player.blogspot.com/");
-	console.log('Sedang Mengirim pesan', 'https://veros-player.blogspot.com/');
+	_0x126c9e.postMessage(btoa(_0x4a7105), "https://wc-2026-player.blogspot.com/");
+	//console.log('Sedang Mengirim pesan', 'https://wc-2026-player.blogspot.com/');
 }
 
 
@@ -361,7 +361,7 @@ var _rebuildPlayer = function (_0x22bedd, _0x18a080, _0x49de1a) {
 	  
       var _0x4a699a = xorDecrypt(_0x367781.url_license, 'indonesia').split(':');
       if (navigator.onLine) {
-        var _shakaPlayerUrl = "https://veros-player.blogspot.com/?type=dash-clearkey&v=" + btoa(btoa(btoa(_0x367781.url_iptv) + ':' + btoa(_0x4a699a[0x0]) + ':' + btoa(_0x4a699a[0x1])));
+        var _shakaPlayerUrl = "https://wc-2026-player.blogspot.com/?type=dash-clearkey&v=" + btoa(btoa(btoa(_0x367781.url_iptv) + ':' + btoa(_0x4a699a[0x0]) + ':' + btoa(_0x4a699a[0x1])));
 		if(!_isReady || $('#shaka_player_iframe').length == 0){
 			var _embedHtml = "<iframe  id=\"shaka_player_iframe\" width=\"100%\" height=\"100%\" src=\"" + _shakaPlayerUrl + "&amp;controls=0\" title=\"" + _0x367781.nama_channel + " - Duktek TV\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>";
 			$("#embed_youtube").html('');
@@ -1133,7 +1133,7 @@ var _reloadMenu = function () {
   if (_isIframe) {
     return;
   }
-  $.get('https://raw.githubusercontent.com/movietrailersxxi-pixel/web/main/json/sportstv.json', {}, function (_0xa4ed25) {
+  $.get('https://raw.githubusercontent.com/movietrailersxxi-pixel/web/main/assets/tv-sports.dat', {}, function (_0xa4ed25) {
     var _0xac868e = '';
     $("#sports_tv_container").html('');
     var _0xa8ccda = 0x0;
@@ -1154,7 +1154,7 @@ var _reloadMenu = function () {
     _initDuktekSports();
     document.getElementById('sports_tv_container').scrollTop = getCookie("scroll_position");
   }, 'json');
-  $.get('https://raw.githubusercontent.com/movietrailersxxi-pixel/web/main/json/livetv.json', {}, function (_jsonDataLiveTV) {
+  $.get('https://raw.githubusercontent.com/movietrailersxxi-pixel/web/main/assets/tv-hiburan.dat', {}, function (_jsonDataLiveTV) {
 	
 	//var _jsonDataLiveTV = xorDecrypt(_jsonDataLiveTVEncrypted, 'indonesia'); 	
 	//_jsonDataLiveTV.url_license
@@ -1178,7 +1178,7 @@ var _reloadMenu = function () {
     _initDuktekSports();
     document.getElementById("live_tv_container").scrollTop = getCookie("entertainment_scroll_position");
   }, 'json');
-  $.get("https://raw.githubusercontent.com/movietrailersxxi-pixel/web/main/json/events.json", {
+  $.get("https://raw.githubusercontent.com/movietrailersxxi-pixel/web/main/assets/tv-events.dat", {
     '_stamp': btoa(_timeMinute())
   }, function (_0x5bbffa) {
     $("#events_container").html('');
